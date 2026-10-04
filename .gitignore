@@ -39,3 +39,8 @@ yarn-error.*
 # generated native folders
 /ios
 /android
+
+# Source protection — no source maps (Law 6)
+*.js.map
+*.map
+*.dSYM
