@@ -1,31 +1,52 @@
 {
   "expo": {
-    "name": "sentinel",
+    "name": "Sentinel",
     "slug": "sentinel",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
-    "userInterfaceStyle": "light",
+    "scheme": "sentinel",
+    "userInterfaceStyle": "automatic",
+    "assetBundlePatterns": [
+      "**/*"
+    ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.sentinel.scanner"
     },
     "android": {
+      "package": "com.sentinel.scanner",
       "adaptiveIcon": {
-        "backgroundColor": "#E6F4FE",
-        "foregroundImage": "./assets/android-icon-foreground.png",
-        "backgroundImage": "./assets/android-icon-background.png",
-        "monochromeImage": "./assets/android-icon-monochrome.png"
+        "foregroundImage": "./assets/icon.png",
+        "backgroundColor": "#0B1120"
       },
-      "predictiveBackGestureEnabled": false
+      "permissions": [
+        "INTERNET"
+      ]
     },
     "web": {
+      "bundler": "metro",
+      "output": "static",
       "favicon": "./assets/favicon.png"
     },
     "plugins": [
-      "expo-router",
-      "expo-image",
-      "expo-secure-store",
-      "expo-localization"
-    ]
+      [
+        "expo-splash-screen",
+        {
+          "image": "./assets/splash-icon.png",
+          "backgroundColor": "#0B1120",
+          "imageWidth": 200
+        }
+      ]
+    ],
+    "updates": {
+      "checkAutomatically": "ON_LOAD"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "effd1a0f-4452-4994-a6e3-fb166a326cc9"
+      }
+    },
+    "owner": "debollll"
   }
 }
